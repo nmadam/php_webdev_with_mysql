@@ -1,0 +1,1 @@
+[27-Jan-2016 07:21:39 UTC] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO), expecting ',' or ';' in /home/ubuntu/workspace/Labs/week02/ch01/report.php on line 28

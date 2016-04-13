@@ -1,0 +1,55 @@
+-- MySQL dump 10.13  Distrib 5.5.44, for debian-linux-gnu (x86_64)
+--
+-- Host: 0.0.0.0    Database: mad_lib
+-- ------------------------------------------------------
+-- Server version	5.5.44-0ubuntu0.14.04.1
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `mad_lib_data`
+--
+
+DROP TABLE IF EXISTS `mad_lib_data`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `mad_lib_data` (
+  `story_id` int(11) NOT NULL AUTO_INCREMENT,
+  `noun` varchar(255) DEFAULT NULL,
+  `verb` varchar(255) DEFAULT NULL,
+  `adjective` varchar(255) DEFAULT NULL,
+  `adverb` varchar(255) DEFAULT NULL,
+  `story` text,
+  PRIMARY KEY (`story_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=73 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `mad_lib_data`
+--
+
+LOCK TABLES `mad_lib_data` WRITE;
+/*!40000 ALTER TABLE `mad_lib_data` DISABLE KEYS */;
+INSERT INTO `mad_lib_data` VALUES (1,'cow','jump','yellow','quickly','The cow jump over the yellow snow pile quickly'),(2,'cow','ran','yellow','quickly','The cow ran over the yellow snow pile quickly. \n'),(3,'horse','drank','green','slowly','The horse drank over the green snow pile slowly. \n'),(4,'horse','drink','blue','madly','The horse drink over the blue snow pile madly. \n'),(5,'man','ate','rough','quietly','The man ate over the rough snow pile quietly. \n'),(6,'man','ate','rough','quietly','The man ate over the rough snow pile quietly. \n'),(7,'dog','ran','blue','quickly','The dog ran over the blue snow pile quickly. \n'),(8,'cat','walk','red','slowly','The cat walk over the red snow pile slowly. \n'),(9,'kid','speedwalk','golden yellow','madly','The kid speedwalk over the golden yellow snow pile madly. \n'),(15,'toy','throw','very far','happily','The toy throw over the very far snow pile happily. \n'),(16,'toy','throw','very far','happily','The toy throw over the very far snow pile happily. \n'),(17,'toy','throw','very far','happily','The toy throw over the very far snow pile happily. \n'),(18,'apple','bite','cold','loudly','The apple bite over the cold snow pile loudly. \n'),(19,'crayon','melt','slow','sadly','The crayon melt over the slow snow pile sadly. \n'),(20,'duck','fly','blue','quickly','The duck fly over the blue snow pile quickly. \n'),(21,'mom','eat','good','gladly','The mom eat over the good snow pile gladly. \n'),(22,'()','()','()','',''),(23,'()','()','()','',''),(24,'()','()','()','',''),(25,'()','()','()','',''),(26,'()','()','()','',''),(27,'()','()','()','',''),(28,'()','()','()','',''),(29,'()','()','()','',''),(30,'Noun','()','()','',''),(31,'Noun','()','()','',''),(32,'getNoun()','()','()','',''),(33,'useMadLib::','()','()','',''),(34,'useMadLib::','()','()','',''),(35,'','()','()','',''),(36,'','()','()','',''),(37,'','()','()','',''),(38,'()','()','()','',''),(39,'()','()','()','',''),(40,'()','()','()','',''),(41,'()','()','()','',''),(42,'noun','()','()','',''),(43,'getNoun()','()','()','',''),(44,'()','()','()','',''),(45,'()','()','()','',''),(46,'','()','()','',''),(47,'self::getNoun()','()','()','',''),(48,'()','()','()','',''),(49,'()','()','()','',''),(50,'()','()','()','',''),(51,'()','()','()','',''),(52,'()','()','()','',''),(53,'()','()','()','',''),(54,'()','()','()','',''),(55,'()','()','()','',''),(56,'()','()','()','',''),(57,'()','()','()','',''),(58,'getNoun()','()','()','',''),(59,'()','()','()','',''),(60,'','()','()','',''),(61,'()','()','()','',''),(62,'()','()','()','',''),(63,'()','()','()','',''),(64,'cow','mad','purple','slowly','The cow mad over the purple snow pile slowly. \n'),(65,'horse','walk','soft','slowly','The horse walk over the soft snow pile slowly. \n'),(66,'kid','jumped','high','again and again','The kid jumped over the high snow pile again and again. \n'),(67,'kid','jumped','high','again and again','The kid jumped over the high snow pile again and again. \n'),(68,'horse','ate','blue','slowly','The horse ate over the blue snow pile slowly. \n'),(69,'horse','ate','blue','slowly','The horse ate over the blue snow pile slowly. \n'),(70,'cow','ate','green','quickly','The cow ate over the green snow pile quickly. \n'),(71,'mouse','jumped','low','again and again','The mouse jumped over the low snow pile again and again. \n'),(72,'kid','walk','small','slowly','The kid walk over the small snow pile slowly. \n');
+/*!40000 ALTER TABLE `mad_lib_data` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2016-03-30 19:59:39
