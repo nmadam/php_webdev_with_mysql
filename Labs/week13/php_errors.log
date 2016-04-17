@@ -1,0 +1,6 @@
+[17-Apr-2016 13:51:12 UTC] PHP Fatal error:  Call to undefined function SHA() in /home/ubuntu/workspace/Labs/week13/ch11/captcha.php on line 16
+[17-Apr-2016 13:51:12 UTC] PHP Stack trace:
+[17-Apr-2016 13:51:12 UTC] PHP   1. {main}() /home/ubuntu/workspace/Labs/week13/ch11/captcha.php:0
+[17-Apr-2016 13:51:59 UTC] PHP Fatal error:  Call to undefined function SHA() in /home/ubuntu/workspace/Labs/week13/ch11/captcha.php on line 16
+[17-Apr-2016 13:51:59 UTC] PHP Stack trace:
+[17-Apr-2016 13:51:59 UTC] PHP   1. {main}() /home/ubuntu/workspace/Labs/week13/ch11/captcha.php:0
