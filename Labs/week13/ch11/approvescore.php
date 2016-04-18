@@ -16,7 +16,6 @@
 <?php
   require_once('appvars.php');
   require_once('connectvars.php');
-
   if (isset($_GET['id']) && isset($_GET['date']) && isset($_GET['name']) && isset($_GET['score'])) {
     // Grab the score data from the GET
     $id = $_GET['id'];
@@ -34,17 +33,14 @@
   else {
     echo '<p class="error">Sorry, no high score was specified for approval.</p>';
   }
-
   if (isset($_POST['submit'])) {
     if ($_POST['confirm'] == 'Yes') {
       // Connect to the database
       $dbc = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME); 
-
       // Approve the score by setting the approved column in the database
       $query = "UPDATE guitarwars SET approved = 1 WHERE id = $id";
       mysqli_query($dbc, $query);
       mysqli_close($dbc);
-
       // Confirm success with the user
       echo '<p>The high score of ' . $score . ' for ' . $name . ' was successfully approved.';
     }
@@ -66,7 +62,6 @@
     echo '<input type="hidden" name="score" value="' . $score . '" />';
     echo '</form>';
   }
-
   echo '<p><a href="admin.php">&lt;&lt; Back to admin page</a></p>';
 ?>
 

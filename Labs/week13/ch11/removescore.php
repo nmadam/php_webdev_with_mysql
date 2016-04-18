@@ -16,7 +16,6 @@
 <?php
   require_once('appvars.php');
   require_once('connectvars.php');
-
   if (isset($_GET['id']) && isset($_GET['date']) && isset($_GET['name']) && isset($_GET['score']) && isset($_GET['screenshot'])) {
     // Grab the score data from the GET
     $id = $_GET['id'];
@@ -34,20 +33,16 @@
   else {
     echo '<p class="error">Sorry, no high score was specified for removal.</p>';
   }
-
   if (isset($_POST['submit'])) {
     if ($_POST['confirm'] == 'Yes') {
       // Delete the screen shot image file from the server
       @unlink(GW_UPLOADPATH . $screenshot);
-
       // Connect to the database
       $dbc = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME); 
-
       // Delete the score data from the database
       $query = "DELETE FROM guitarwars WHERE id = $id LIMIT 1";
       mysqli_query($dbc, $query);
       mysqli_close($dbc);
-
       // Confirm success with the user
       echo '<p>The high score of ' . $score . ' for ' . $name . ' was successfully removed.';
     }
@@ -68,7 +63,6 @@
     echo '<input type="hidden" name="score" value="' . $score . '" />';
     echo '</form>';
   }
-
   echo '<p><a href="admin.php">&lt;&lt; Back to admin page</a></p>';
 ?>
 

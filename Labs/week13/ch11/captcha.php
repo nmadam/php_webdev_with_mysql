@@ -36,8 +36,12 @@
         imagesetpixel($img, rand() % CAPTCHA_WIDTH, rand() % CAPTCHA_HEIGHT, $graphic_color);
     }
 
-    // Draw the pass-phrase string - copy font onto your server   imagettftext($img, 18, 0, 5, CAPTCHA_HEIGHT - 5, $text_color, 'Courier New Bold.ttf', $pass_phrase);
-
+    // Draw the pass-phrase string - copy font onto your server
+    
+    //Program is erroring on this line!!
+    imagettftext($img, 18, 0, 5, CAPTCHA_HEIGHT - 5, $text_color, './Courier New Bold.ttf', $pass_phrase);
+    
+    
     // Output the image as a PNG using a header
     header("Content-type: image/png");
     imagepng($img);
